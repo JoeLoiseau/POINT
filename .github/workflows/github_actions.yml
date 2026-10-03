@@ -2,7 +2,7 @@ name: Add a point
 
 on:
   schedule:
-    - cron: "20 14 * * *"
+    - cron: "00 20 * * *"
   workflow_dispatch:
 
 env:
