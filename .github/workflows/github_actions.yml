@@ -31,5 +31,4 @@ jobs:
 
           git add POINT.txt
           git commit -m "Add a point on $(date)" || echo "Nothing to commit"
-          git log -1 --format='%an <%ae>'
           git push
