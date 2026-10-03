@@ -2,7 +2,7 @@ name: Add a point
 
 on:
     schedule:
-        - cron: "20 15 * * *"
+        - cron: "20 13 * * *"
 
 env:
     POINT_TOKEN: ${{ secrets.POINT_TOKEN }}
