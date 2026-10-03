@@ -31,4 +31,4 @@ jobs:
 
           git add POINT.txt
           git commit -m "Add a point on $(date)" || echo "Nothing to commit"
-          git push origin HEAD
+          git push
