@@ -2,7 +2,8 @@ name: Add a point
 
 on:
   schedule:
-    - cron: '25 17 * * *'
+    - cron: '35 19 * * *'
+      timezone: 'Europe/Paris'
   workflow_dispatch:
 
 env:
