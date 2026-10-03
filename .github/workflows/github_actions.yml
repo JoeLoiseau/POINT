@@ -1,0 +1,24 @@
+name: Add a point
+
+on:
+    schedule:
+        - cron: "0 10 * * *"
+
+env:
+    POINT_TOKEN: ${{ secrets.POINT_TOKEN }}
+    GIT_USER: ${{ secrets.GIT_USER }}   
+    GIT_EMAIL: ${{ secrets.GIT_EMAIL }}
+
+jobs:
+    runs-on: ubuntu-latest
+    steps:
+        - uses: actions/checkout@v4
+        - name: Push a point to the repository
+        run: |
+        git config --global user.name "${GIT_USER}"
+        git config --global user.email "${GIT_EMAIL}"
+        echo "Adding a point to the repository"
+        echo "Point added on $(date)" >> points.txt
+        git add points.txt
+        git commit -m "Add a point on $(date)"
+        git push origin main
